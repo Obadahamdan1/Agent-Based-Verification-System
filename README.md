@@ -1,66 +1,39 @@
-Overview
-This project is a simulation of a police station’s lost-and-found system. The station maintains a collection of lost wallets. The process is simple and effective:
-The system uses a person’s face ID along with their id.
+# Agent-Based Lost-and-Found System
 
+## Overview
+This project is an AI-powered simulation of a police station's lost-and-found system, specifically designed for managing lost wallets. The system utilizes **Natural Language Understanding (NLU)** to verify claims by matching a person’s Face ID and physical ID against a secure database.
 
-If the face and id match an entry in the lost wallets database, the system returns the wallet.
+## Key Features
+* **Agent-Based Design:** Incorporates advanced decision-making logic to determine claim validity.
+* **Deep Learning Powered:** Built with **PyTorch** for robust natural language processing and response generation.
+* **Flexible Input Handling:** Utilizes **RapidFuzz** and regex for high-accuracy string matching and processing.
+* **Interactive Interface:** Deployed via **Gradio**, providing a real-time, user-friendly interface in Google Colab.
+* **GPU Optimized:** Fully supports CUDA acceleration for fast inference.
 
+## Project Structure
+1.  **Data Preparation:** Automated loading and preprocessing of CSV/Excel datasets.
+2.  **Model Training:** Defines and optimizes the agent’s reasoning model using PyTorch.
+3.  **Agent Logic:** Implementation of the reasoning layers and decision-making protocols.
+4.  **Interface Deployment:** Launching the Gradio web UI for user interaction.
 
-If they do not match, the claim is denied, and no wallet is released.
-Features
-Agent-based design: goes beyond a simple chatbot by incorporating decision-making logic.
+## Usage
+### Requirements
+To install the necessary dependencies, run:
+`pip install openpyxl rapidfuzz torch gradio`
 
+### Running the System
+1.  Open the notebook in **Google Colab**.
+2.  **Enable GPU:** Go to `Runtime` > `Change runtime type` > `GPU (T4/L4 recommended)`.
+3.  **Execute:** Run all cells to initialize data, train the agent, and launch the interface.
+4.  **Interact:** Follow the Gradio link provided in the final cell to start the simulation.
 
-PyTorch-powered: uses deep learning models for natural language understanding and response generation.
+## Future Improvements
+* **Reasoning Expansion:** Extending the agent's logic for complex multi-turn verification.
+* **Multi-Agent Collaboration:** Introducing specialized agents for different lost item categories.
+* **API Integration:** Connecting to external databases for real-world application.
+* **Contextual Memory:** Enhancing the system's ability to remember previous interactions.
 
-
-String matching & processing: powered by RapidFuzz and regex for flexible input handling.
-
-
-Interactive interface: built with Gradio for real-time interaction in Colab.
-
-
-Colab-optimized: supports GPU acceleration for faster training and inference
-
-Project Structure
-Data Preparation → Loads and preprocesses datasets (CSV/Excel supported).
-
-
-Model Training → Defines and trains the agent’s model using PyTorch.
-
-
-Agent Logic → Implements reasoning and decision-making layers.
-
-
-Interface → Deploys the trained agent with Gradio for user interaction.
-
-Requirements
-The notebook will automatically install the required dependencies:
-pip install openpyxl rapidfuzz torch gradio.
-
- Usage
-Open the notebook in Google Colab.
-Enable GPU: Runtime > Change runtime type > GPU (T4/L4 recommended)
-Run all cells to:
--Install dependencies
--Load/preprocess data
--Train the agent
--Launch the interface
-The final cell will provide a Gradio link where you can interact with the agent.
-
-Future Improvements
-Extend the agent’s reasoning capabilities.
-
-
-Add multi-agent collaboration features.
-
-
-Integrate external APIs for broader functionality.
-
-
-Enhance memory for contextual, multi-turn interactions.
-
-Peak Members
-Razan Takruri- Leader
-Renad Naser 
-Obada Hamdan 
+## Team Members
+* **Razan Takruri**
+* **Renad Naser** (Leader)
+* **Obada Hamdan**
